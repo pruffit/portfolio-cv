@@ -216,6 +216,29 @@
       "description": "Занимаюсь творческим кластером 'Тусовка', организую мероприятия."
     }
   },
+  "achievements": {
+    "title": "Достижения",
+    "react": {
+      "title": "React Advanced Developer",
+      "issuer": "Online Courses",
+      "description": "Углубленное изучение React: хуки, оптимизация производительности, архитектура приложений."
+    },
+    "typescript": {
+      "title": "TypeScript Expert",
+      "issuer": "Self-study & Practice",
+      "description": "Продвинутое использование TypeScript: дженерики, утилитные типы, type-safe архитектура."
+    },
+    "nextjs": {
+      "title": "Next.js Developer",
+      "issuer": "Production Projects",
+      "description": "Разработка production приложений на Next.js с SSR, SSG и оптимизацией."
+    },
+    "education": {
+      "title": "Информатика и вычислительная техника",
+      "issuer": "ПГУТИ",
+      "description": "Высшее образование по специальности 'Информатика и вычислительная техника'."
+    }
+  },
   "test": {
     "title": "Тест переключения языка",
     "description": "Попробуйте переключить язык!"

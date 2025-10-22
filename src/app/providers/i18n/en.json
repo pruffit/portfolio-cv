@@ -215,6 +215,29 @@
       "description": "Running creative cluster 'Tusovka', organizing events."
     }
   },
+  "achievements": {
+    "title": "Achievements",
+    "react": {
+      "title": "React Advanced Developer",
+      "issuer": "Online Courses",
+      "description": "Deep dive into React: hooks, performance optimization, application architecture."
+    },
+    "typescript": {
+      "title": "TypeScript Expert",
+      "issuer": "Self-study & Practice",
+      "description": "Advanced TypeScript usage: generics, utility types, type-safe architecture."
+    },
+    "nextjs": {
+      "title": "Next.js Developer",
+      "issuer": "Production Projects",
+      "description": "Building production Next.js applications with SSR, SSG and optimization."
+    },
+    "education": {
+      "title": "Computer Science",
+      "issuer": "PSUTI",
+      "description": "Higher education degree in Computer Science and Engineering."
+    }
+  },
   "test": {
     "title": "Language toggle test",
     "description": "Try switching the language!"
