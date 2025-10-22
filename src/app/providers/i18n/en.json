@@ -238,6 +238,26 @@
       "description": "Higher education degree in Computer Science and Engineering."
     }
   },
+  "contacts": {
+    "title": "Contacts",
+    "subtitle": "Get in Touch",
+    "description": "Open for new projects and collaborations. Feel free to contact me through any convenient channel.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "form": {
+      "title": "Or Send a Message",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "sending": "Sending...",
+      "success": "Message sent!",
+      "error": "Send error"
+    }
+  },
   "test": {
     "title": "Language toggle test",
     "description": "Try switching the language!"
