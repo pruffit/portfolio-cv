@@ -5,6 +5,7 @@ import { SkillsSection } from '@/widgets/skills-section'
 import { ExperienceSection } from '@/widgets/experience-section'
 import { ProjectsSection } from '@/widgets/projects-section'
 import { HobbiesSection } from '@/widgets/hobbies-section'
+import { AchievementsSection } from '@/widgets/achievements-section'
 import { useTranslation } from 'react-i18next'
 
 export function App() {
@@ -22,9 +23,7 @@ export function App() {
 
       <HobbiesSection />
 
-      <Section id="achievements" title={t('nav.achievements')} className="bg-muted/50">
-        <p className="text-muted-foreground">Achievements content will be here...</p>
-      </Section>
+      <AchievementsSection />
 
       <Section id="game" title={t('nav.game')}>
         <p className="text-muted-foreground">Game will be here...</p>

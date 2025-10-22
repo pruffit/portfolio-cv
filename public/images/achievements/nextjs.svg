@@ -1,0 +1,6 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#18181B"/>
+  <circle cx="200" cy="150" r="60" fill="white"/>
+  <text x="200" y="165" font-family="system-ui" font-size="40" fill="black" text-anchor="middle" font-weight="bold">N</text>
+  <text x="200" y="240" font-family="system-ui" font-size="20" fill="#71717A" text-anchor="middle">Next.js</text>
+</svg>
