@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/shared/lib/utils'
+import { useState, useEffect } from 'react'
 
 const navItems = [
   { key: 'about', href: '#about' },
@@ -18,6 +19,27 @@ interface NavigationProps {
 
 export function Navigation({ className }: NavigationProps) {
   const { t } = useTranslation()
+  const [activeSection, setActiveSection] = useState('')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    navItems.forEach(item => {
+      const element = document.querySelector(item.href)
+      if (element) observer.observe(element)
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
@@ -34,7 +56,12 @@ export function Navigation({ className }: NavigationProps) {
           key={item.key}
           href={item.href}
           onClick={e => handleClick(e, item.href)}
-          className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground cursor-pointer"
+          className={cn(
+            'cursor-pointer rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-foreground',
+            activeSection === item.key.replace('nav.', '')
+              ? 'bg-accent text-foreground'
+              : 'text-muted-foreground'
+          )}
         >
           {t(`nav.${item.key}`)}
         </a>
