@@ -150,6 +150,37 @@
       }
     }
   },
+  "projects": {
+    "title": "Проекты",
+    "view_code": "Код",
+    "view_demo": "Демо",
+    "view_gist": "Gist",
+    "featured": "Избранное",
+    "portfolio": {
+      "title": "Portfolio CV",
+      "description": "Современное портфолио-резюме с поддержкой двух языков, темной/светлой темы, анимациями и мини-игрой Flappy Bird."
+    },
+    "hooks": {
+      "title": "Custom React Hooks",
+      "description": "Коллекция переиспользуемых React хуков для управления состоянием, эффектами, формами и API запросами."
+    },
+    "components": {
+      "title": "UI Components Library",
+      "description": "Библиотека переиспользуемых UI компонентов на React с TypeScript, Tailwind CSS и полной типизацией."
+    },
+    "state": {
+      "title": "State Management Examples",
+      "description": "Примеры управления состоянием в React приложениях с Redux Toolkit, Zustand, Context API и другими решениями."
+    },
+    "animations": {
+      "title": "Animation Showcase",
+      "description": "Коллекция анимаций и переходов с использованием Framer Motion, CSS Animations и GSAP."
+    },
+    "forms": {
+      "title": "Form Validation System",
+      "description": "Система валидации форм с React Hook Form, Zod схемами и кастомными валидаторами."
+    }
+  },
   "test": {
     "title": "Тест переключения языка",
     "description": "Попробуйте переключить язык!"

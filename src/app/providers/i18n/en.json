@@ -149,6 +149,37 @@
       }
     }
   },
+  "projects": {
+    "title": "Projects",
+    "view_code": "Code",
+    "view_demo": "Demo",
+    "view_gist": "Gist",
+    "featured": "Featured",
+    "portfolio": {
+      "title": "Portfolio CV",
+      "description": "Modern portfolio resume with bilingual support, dark/light theme, animations and Flappy Bird mini-game."
+    },
+    "hooks": {
+      "title": "Custom React Hooks",
+      "description": "Collection of reusable React hooks for state management, effects, forms and API requests."
+    },
+    "components": {
+      "title": "UI Components Library",
+      "description": "Library of reusable React UI components with TypeScript, Tailwind CSS and full type safety."
+    },
+    "state": {
+      "title": "State Management Examples",
+      "description": "Examples of state management in React applications with Redux Toolkit, Zustand, Context API and other solutions."
+    },
+    "animations": {
+      "title": "Animation Showcase",
+      "description": "Collection of animations and transitions using Framer Motion, CSS Animations and GSAP."
+    },
+    "forms": {
+      "title": "Form Validation System",
+      "description": "Form validation system with React Hook Form, Zod schemas and custom validators."
+    }
+  },
   "test": {
     "title": "Language toggle test",
     "description": "Try switching the language!"
