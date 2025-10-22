@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import { App } from './App'
 import { ThemeProvider } from './providers/theme'
 import { I18nTestProvider } from '@/shared/test/i18n-test-utils'
@@ -14,11 +13,11 @@ const AppWithProviders = () => (
 )
 
 describe('App', () => {
-  it('should render the app with a button', () => {
+  it('should render header with navigation', () => {
     render(<AppWithProviders />)
 
-    const button = screen.getByRole('button', { name: /click me/i })
-    expect(button).toBeInTheDocument()
+    const headers = screen.getAllByText(/котлаев данил/i)
+    expect(headers.length).toBeGreaterThan(0)
   })
 
   it('should render theme toggle button', () => {
@@ -35,33 +34,29 @@ describe('App', () => {
     expect(langToggle).toBeInTheDocument()
   })
 
-  it('should have proper layout classes', () => {
-    const { container } = render(<AppWithProviders />)
-
-    const mainDiv = container.firstChild as HTMLElement
-    expect(mainDiv).toHaveClass('flex', 'min-h-svh', 'flex-col', 'items-center', 'justify-center')
-  })
-
-  it('should render button with correct text', () => {
+  it('should render all sections', () => {
     render(<AppWithProviders />)
 
-    expect(screen.getByText('Click me')).toBeInTheDocument()
+    expect(document.querySelector('#about')).toBeInTheDocument()
+    expect(document.querySelector('#skills')).toBeInTheDocument()
+    expect(document.querySelector('#experience')).toBeInTheDocument()
+    expect(document.querySelector('#projects')).toBeInTheDocument()
+    expect(document.querySelector('#hobbies')).toBeInTheDocument()
+    expect(document.querySelector('#achievements')).toBeInTheDocument()
+    expect(document.querySelector('#game')).toBeInTheDocument()
+    expect(document.querySelector('#contacts')).toBeInTheDocument()
   })
 
-  it('should be clickable', async () => {
-    const user = userEvent.setup()
+  it('should render footer with social links', () => {
     render(<AppWithProviders />)
 
-    const button = screen.getByRole('button', { name: /click me/i })
-    await user.click(button)
-
-    expect(button).toBeInTheDocument()
+    expect(screen.getByText(/© 2025 kotlaev danil/i)).toBeInTheDocument()
   })
 
-  it('should render translated text', () => {
+  it('should render download CV button', () => {
     render(<AppWithProviders />)
 
-    expect(screen.getByText(/тест переключения языка/i)).toBeInTheDocument()
-    expect(screen.getByText(/попробуйте переключить язык/i)).toBeInTheDocument()
+    const downloadButton = screen.getByRole('button', { name: /скачать резюме/i })
+    expect(downloadButton).toBeInTheDocument()
   })
 })
