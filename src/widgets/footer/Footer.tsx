@@ -26,21 +26,21 @@ export function Footer() {
   return (
     <footer className="border-t bg-background">
       <Container>
-        <div className="flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
-          <p className="text-sm text-muted-foreground">
+        <div className="flex flex-col items-center justify-between gap-4 py-6 md:flex-row md:py-8">
+          <p className="text-center text-sm text-muted-foreground md:text-left">
             © {currentYear} Kotlaev Danil. All rights reserved.
           </p>
 
           <div className="flex items-center gap-2">
             {socialLinks.map(link => (
-              <Button key={link.name} variant="ghost" size="icon" asChild>
+              <Button key={link.name} variant="ghost" size="icon-sm" asChild>
                 <a
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.name}
                 >
-                  <link.icon className="size-5" />
+                  <link.icon className="size-4" />
                 </a>
               </Button>
             ))}

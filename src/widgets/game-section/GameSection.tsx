@@ -16,11 +16,13 @@ export function GameSection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">{t('nav.game')}</h2>
-          <p className="mb-12 text-muted-foreground">
+          <p className="mb-8 text-sm text-muted-foreground md:mb-12 md:text-base">
             {t('game.title')} - классическая аркадная игра. Попробуйте побить рекорд!
           </p>
 
-          <FlappyBirdGame />
+          <div className="overflow-x-auto">
+            <FlappyBirdGame />
+          </div>
         </motion.div>
       </Container>
     </section>
