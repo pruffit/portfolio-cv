@@ -15,7 +15,9 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "type-check": "tsc --noEmit",
-    "prepare": "husky install || true"
+    "prepare": "husky install || true",
+    "check": "pnpm run lint && pnpm run format:check && pnpm run type-check",
+    "fix": "pnpm run format && pnpm run lint:fix"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
