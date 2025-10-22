@@ -24,6 +24,27 @@
     "description_2": "Worked on e-commerce platforms, corporate educational systems and subscription services. Deep understanding of frontend architecture, state management and building responsive interfaces with animations.",
     "description_3": "Besides programming, I'm passionate about music, sound design and graphic design. I consider development a form of creativity and genuinely enjoy the process of creating products."
   },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "languages": "Programming Languages",
+      "frameworks": "Frameworks & Libraries",
+      "styling": "Markup & Styling",
+      "tools": "Tools & Bundlers",
+      "testing": "Testing & Code Quality",
+      "vcs": "Version Control Systems",
+      "devops": "DevOps / CI/CD"
+    },
+    "levels": {
+      "Beginner": "Beginner",
+      "Intermediate": "Intermediate",
+      "Advanced": "Advanced"
+    },
+    "years": {
+      "one": "{{count}} year",
+      "other": "{{count}} years"
+    }
+  },
   "test": {
     "title": "Language toggle test",
     "description": "Try switching the language!"
