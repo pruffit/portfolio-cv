@@ -1,4 +1,5 @@
-# Portfolio CV - KOTLAEV DANIL
+# Portfolio CV - Kotlaev Danil
+
 Professional portfolio website showcasing my experience as a Frontend Developer with 4+ years of expertise in modern web applications.
 
 ## Tech Stack
@@ -45,59 +46,88 @@ Professional portfolio website showcasing my experience as a Frontend Developer 
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/portfolio-cv.git
+git clone https://github.com/pruffit/portfolio-cv.git
 cd portfolio-cv
 
 # Install dependencies
-pnpm install
+npm install
 
 # Start development server
-pnpm run dev
+npm run dev
 
 # Build for production
-pnpm run build
+npm run build
 
 # Preview production build
-pnpm run preview
+npm run preview
 
 # Run tests
-pnpm run test
+npm run test
 
 # Run tests with UI
-pnpm run test:ui
+npm run test:ui
+
+# Run tests with coverage
+npm run test:coverage
 
 # Run linting
-pnpm run lint
+npm run lint
+
+# Fix linting issues
+npm run lint:fix
 
 # Format code
-pnpm run format
+npm run format
+
+# Check formatting
+npm run format:check
+
+# Type check
+npm run type-check
 ```
 
-## 📦 Project Structure
+## Project Structure
 ```
 portfolio-cv/
 ├── src/
 │   ├── app/           # Application initialization
+│   │   ├── providers/ # Providers (theme, i18n)
+│   │   ├── styles/    # Global styles
+│   │   └── App.tsx    # Root component
 │   ├── pages/         # Page components
 │   ├── widgets/       # Complex UI blocks
 │   ├── features/      # User interactions
 │   ├── entities/      # Business entities
 │   ├── shared/        # Reusable code
+│   │   ├── ui/        # UI components (shadcn)
+│   │   ├── lib/       # Utilities and helpers
+│   │   └── hooks/     # Custom React hooks
 │   └── main.tsx       # Entry point
 ├── public/            # Static assets
-└── tests/             # Test files
+└── tests/             # E2E and integration tests
 ```
 
-## 🌐 Deployment
+## Architecture
+
+This project follows Feature-Sliced Design (FSD) methodology:
+
+- **app** - Application initialization, providers, global styles
+- **pages** - Route pages composition
+- **widgets** - Large composite blocks
+- **features** - User interactions and business features
+- **entities** - Business entities and their logic
+- **shared** - Reusable infrastructure code
+
+## Deployment
 
 The site is deployed on GitHub Pages:
 [https://pruffit.github.io/portfolio-cv/](https://pruffit.github.io/portfolio-cv/)
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+## Author
 
 **KOTLAEV DANIL**
 
@@ -105,7 +135,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Telegram: [@userpruffit](https://t.me/userpruffit)
 - GitHub: [@pruffit](https://github.com/pruffit)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Design inspiration: [Next.js](https://nextjs.org/)
 - UI Components: [shadcn/ui](https://ui.shadcn.com/)
@@ -113,4 +143,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Built by KOTLAEV DANIL
+Built with care and attention to detail by KOTLAEV DANIL
