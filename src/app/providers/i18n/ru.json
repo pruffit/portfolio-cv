@@ -1,0 +1,27 @@
+{
+  "common": {
+    "theme": "Тема",
+    "language": "Язык",
+    "download_cv": "Скачать резюме"
+  },
+  "nav": {
+    "about": "Обо мне",
+    "skills": "Навыки",
+    "experience": "Опыт",
+    "projects": "Проекты",
+    "hobbies": "Хобби",
+    "achievements": "Достижения",
+    "game": "Игра",
+    "contacts": "Контакты"
+  },
+  "about": {
+    "title": "Обо мне",
+    "name": "Котлаев Данил",
+    "position": "Frontend Developer",
+    "description": "Фронтенд-разработчик с 4+ годами опыта создания современных веб-приложений. Специализируюсь на React, TypeScript и Next.js."
+  },
+  "test": {
+    "title": "Тест переключения языка",
+    "description": "Попробуйте переключить язык!"
+  }
+}

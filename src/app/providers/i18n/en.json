@@ -1,0 +1,27 @@
+{
+  "common": {
+    "theme": "Theme",
+    "language": "Language",
+    "download_cv": "Download CV"
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "hobbies": "Hobbies",
+    "achievements": "Achievements",
+    "game": "Game",
+    "contacts": "Contacts"
+  },
+  "about": {
+    "title": "About Me",
+    "name": "Kotlaev Danil",
+    "position": "Frontend Developer",
+    "description": "Frontend developer with 4+ years of experience building modern web applications. Specialized in React, TypeScript and Next.js."
+  },
+  "test": {
+    "title": "Language toggle test",
+    "description": "Try switching the language!"
+  }
+}
