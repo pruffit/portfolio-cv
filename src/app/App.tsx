@@ -6,6 +6,7 @@ import { ExperienceSection } from '@/widgets/experience-section'
 import { ProjectsSection } from '@/widgets/projects-section'
 import { HobbiesSection } from '@/widgets/hobbies-section'
 import { AchievementsSection } from '@/widgets/achievements-section'
+import { ContactsSection } from '@/widgets/contacts-section'
 import { useTranslation } from 'react-i18next'
 
 export function App() {
@@ -29,9 +30,7 @@ export function App() {
         <p className="text-muted-foreground">Game will be here...</p>
       </Section>
 
-      <Section id="contacts" title={t('nav.contacts')} className="bg-muted/50">
-        <p className="text-muted-foreground">Contacts content will be here...</p>
-      </Section>
+      <ContactsSection />
     </MainLayout>
   )
 }
