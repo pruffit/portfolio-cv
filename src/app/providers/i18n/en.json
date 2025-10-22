@@ -45,6 +45,110 @@
       "other": "{{count}} years"
     }
   },
+  "experience": {
+    "title": "Work Experience",
+    "team": "Team",
+    "technologies": "Technologies",
+    "responsibilities": "Responsibilities",
+    "achievements": "Achievements",
+    "skuratov": {
+      "position": "Frontend Developer",
+      "period": "July 2024 — August 2025",
+      "description": "Corporate educational platform for coffee shop chain with learning modules, personal accounts and gamification system.",
+      "responsibilities": {
+        "0": "Designed educational platform architecture from scratch",
+        "1": "Developed learning module interface with gamification",
+        "2": "Created personal account system for different user roles",
+        "3": "Integrated custom video and audio players with progress tracking",
+        "4": "Developed admin panel with tree-structured user hierarchy",
+        "5": "Optimized responsive layout and UX for mobile devices",
+        "6": "Set up CI/CD and automated deployment",
+        "7": "Ensured scalability and high performance",
+        "8": "Implemented interactive quizzes and drag-n-drop games",
+        "9": "Developed lecture system with step-by-step completion",
+        "10": "Created knowledge base for material storage and quick access",
+        "11": "Built complex registration and authentication system"
+      },
+      "achievements": {
+        "0": "90% of employees completed training courses monthly",
+        "1": "Video and test loading time reduced by 40%",
+        "2": "Notification system reduced missed courses by 30%",
+        "3": "Improved platform stability and scalability",
+        "4": "Implemented intuitive and modern interface",
+        "5": "Enhanced user experience through navigation optimization and gamification",
+        "6": "Created flexible system easily adaptable to new roles and structures"
+      }
+    },
+    "condition": {
+      "position": "Frontend Developer",
+      "period": "October 2023 — June 2024",
+      "description": "Premium Chinese loose leaf tea online store with ordering, subscription boxes and table booking features.",
+      "responsibilities": {
+        "0": "Developed product catalog with multi-level filters and sorting",
+        "1": "Implemented shopping cart and checkout process",
+        "2": "Integrated with Go REST API and implemented CRUD operations",
+        "3": "Created blog with WYSIWYG editors for content",
+        "4": "Set up analytics for conversion and sales tracking",
+        "5": "Ensured frontend architecture scalability",
+        "6": "Developed review system with moderation",
+        "7": "Implemented tea box subscription and personalized recommendations",
+        "8": "Created tea house table booking functionality",
+        "9": "Optimized UI, responsive layout and performance"
+      },
+      "achievements": {
+        "0": "Conversion increased by 25% through UX optimization",
+        "1": "Subscription system increased customer LTV by 30%",
+        "2": "Page loading optimization — 40% faster",
+        "3": "Responsive design for all device types",
+        "4": "Stable integration with Go backend via REST API",
+        "5": "Maintained high performance with large product catalog"
+      }
+    },
+    "usti": {
+      "position": "Frontend Developer",
+      "period": "January 2023 — September 2023",
+      "description": "Multi-functional yoga club website with booking tools, online payments, schedules and content sections.",
+      "responsibilities": {
+        "0": "Developed client-side with SSR and SSG",
+        "1": "Integrated REST API and payment system",
+        "2": "Created authentication system with JWT and personal accounts",
+        "3": "Developed admin panel for content management",
+        "4": "Connected custom video and audio players",
+        "5": "Optimized performance and SEO",
+        "6": "Implemented responsive interface with animations",
+        "7": "Fully containerized infrastructure with Docker"
+      },
+      "achievements": {
+        "0": "Stable production deployment",
+        "1": "Page loading speed increased by 30%",
+        "2": "Smooth animations with Framer Motion",
+        "3": "Clear separation of client and server state",
+        "4": "Full CI/CD cycle with automated deployment",
+        "5": "High SEO metrics"
+      }
+    },
+    "lzmedia": {
+      "position": "Frontend Developer",
+      "period": "November 2021 — June 2022",
+      "description": "Modern fitness club website with booking system, class schedules and trainer information.",
+      "responsibilities": {
+        "0": "Developed client-side architecture",
+        "1": "Responsive page layout with animations",
+        "2": "REST API integration and CRUD operations",
+        "3": "Created reusable components and forms",
+        "4": "Optimized performance and Lighthouse metrics",
+        "5": "Maintained and scaled codebase"
+      },
+      "achievements": {
+        "0": "Created full-featured booking system with online payments",
+        "1": "Page loading time reduced by 35%",
+        "2": "User retention increased by 25%",
+        "3": "Optimized interface for all devices",
+        "4": "Automated build and deployment",
+        "5": "Ensured cross-browser compatibility and stability"
+      }
+    }
+  },
   "test": {
     "title": "Language toggle test",
     "description": "Try switching the language!"

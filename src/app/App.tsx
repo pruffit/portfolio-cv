@@ -2,6 +2,7 @@ import { MainLayout } from '@/app/layouts'
 import { Section } from '@/widgets/sections'
 import { AboutSection } from '@/widgets/about-section'
 import { SkillsSection } from '@/widgets/skills-section'
+import { ExperienceSection } from '@/widgets/experience-section'
 import { useTranslation } from 'react-i18next'
 
 export function App() {
@@ -13,9 +14,7 @@ export function App() {
 
       <SkillsSection />
 
-      <Section id="experience" title={t('nav.experience')}>
-        <p className="text-muted-foreground">Experience content will be here...</p>
-      </Section>
+      <ExperienceSection />
 
       <Section id="projects" title={t('nav.projects')} className="bg-muted/50">
         <p className="text-muted-foreground">Projects content will be here...</p>
