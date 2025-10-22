@@ -1,21 +1,14 @@
 import { MainLayout } from '@/app/layouts'
 import { Section } from '@/widgets/sections'
+import { AboutSection } from '@/widgets/about-section'
 import { useTranslation } from 'react-i18next'
-import { Button } from '@/shared/ui/button'
 
 export function App() {
   const { t } = useTranslation()
 
   return (
     <MainLayout>
-      <Section id="about" title={t('nav.about')}>
-        <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">{t('about.name')}</h3>
-          <p className="text-lg text-muted-foreground">{t('about.position')}</p>
-          <p className="text-muted-foreground">{t('about.description')}</p>
-          <Button>{t('common.download_cv')}</Button>
-        </div>
-      </Section>
+      <AboutSection />
 
       <Section id="skills" title={t('nav.skills')} className="bg-muted/50">
         <p className="text-muted-foreground">Skills content will be here...</p>

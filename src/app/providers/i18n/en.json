@@ -18,7 +18,11 @@
     "title": "About Me",
     "name": "Kotlaev Danil",
     "position": "Frontend Developer",
-    "description": "Frontend developer with 4+ years of experience building modern web applications. Specialized in React, TypeScript and Next.js."
+    "location": "Russia, Samara",
+    "experience": "4+ years of experience",
+    "description": "Frontend developer with 4+ years of experience building modern web applications. Specialized in React, TypeScript and Next.js. Graduated from PSUTI with a degree in Computer Science.",
+    "description_2": "Worked on e-commerce platforms, corporate educational systems and subscription services. Deep understanding of frontend architecture, state management and building responsive interfaces with animations.",
+    "description_3": "Besides programming, I'm passionate about music, sound design and graphic design. I consider development a form of creativity and genuinely enjoy the process of creating products."
   },
   "test": {
     "title": "Language toggle test",

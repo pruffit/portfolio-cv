@@ -34,7 +34,7 @@ export function Navigation({ className }: NavigationProps) {
           key={item.key}
           href={item.href}
           onClick={e => handleClick(e, item.href)}
-          className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+          className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground cursor-pointer"
         >
           {t(`nav.${item.key}`)}
         </a>
