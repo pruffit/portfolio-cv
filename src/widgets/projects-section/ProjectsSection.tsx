@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Container } from '@/shared/ui/container'
 import { projectsData } from '@/entities/project'
 import { ProjectCard } from '@/entities/project/ui'
+import { ProjectsCarousel } from './ProjectsCarousel'
 import { motion } from 'motion/react'
 
 export function ProjectsSection() {
@@ -19,12 +20,12 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="mb-12 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
             {t('projects.title')}
           </h2>
 
           {featuredProjects.length > 0 && (
-            <div className="mb-8">
+            <div className="mb-12">
               <div className="grid gap-6 md:grid-cols-2">
                 {featuredProjects.map((project, index) => (
                   <ProjectCard key={project.id} project={project} index={index} />
@@ -34,14 +35,9 @@ export function ProjectsSection() {
           )}
 
           {otherProjects.length > 0 && (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {otherProjects.map((project, index) => (
-                <ProjectCard
-                  key={project.id}
-                  project={project}
-                  index={featuredProjects.length + index}
-                />
-              ))}
+            <div>
+              <h3 className="mb-6 text-xl font-semibold">{t('projects.otherProjects')}</h3>
+              <ProjectsCarousel projects={otherProjects} />
             </div>
           )}
         </motion.div>

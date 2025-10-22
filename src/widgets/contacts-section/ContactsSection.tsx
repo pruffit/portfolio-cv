@@ -8,7 +8,7 @@ export function ContactsSection() {
   const { t } = useTranslation()
 
   return (
-    <section id="contacts" className="py-16 md:py-24">
+    <section id="contacts" className="bg-muted/50 py-16 md:py-24">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,6 +22,7 @@ export function ContactsSection() {
               {t('contacts.title')}
             </h2>
             <p className="text-lg text-muted-foreground">{t('contacts.subtitle')}</p>
+            <p className="mt-2 text-muted-foreground">{t('contacts.description')}</p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -29,16 +30,6 @@ export function ContactsSection() {
               <ContactCard key={contact.id} contact={contact} index={index} />
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-12 text-center"
-          >
-            <p className="text-muted-foreground">{t('contacts.description')}</p>
-          </motion.div>
         </motion.div>
       </Container>
     </section>

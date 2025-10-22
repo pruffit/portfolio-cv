@@ -1,10 +1,10 @@
 import { GameConfig } from './types'
 
 export const GAME_CONFIG: GameConfig = {
-  gravity: 0.5,
-  jumpForce: -8,
+  gravity: 0.4,
+  jumpForce: -7,
   pipeSpeed: 2,
-  pipeGap: 150,
+  pipeGap: 180,
   pipeWidth: 60,
   pipeSpacing: 300,
   birdRadius: 15,

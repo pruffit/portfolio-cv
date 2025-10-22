@@ -8,6 +8,7 @@ export interface Project {
     github?: string
     demo?: string
     gist?: string
+    gitlab?: string
   }
   featured?: boolean
 }

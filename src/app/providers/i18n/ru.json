@@ -26,6 +26,9 @@
   },
   "skills": {
     "title": "Навыки",
+    "year": "год",
+    "years2": "года",
+    "years5": "лет",
     "categories": {
       "languages": "Языки программирования",
       "frameworks": "Фреймворки и библиотеки",
@@ -33,7 +36,8 @@
       "tools": "Инструменты и сборщики",
       "testing": "Тестирование и качество кода",
       "vcs": "Системы контроля версий",
-      "devops": "DevOps / CI/CD"
+      "devops": "DevOps / CI/CD",
+      "os": "Операционные системы"
     },
     "levels": {
       "Beginner": "Начальный",
@@ -52,6 +56,7 @@
     "technologies": "Технологии",
     "responsibilities": "Обязанности",
     "achievements": "Достижения",
+    "moreCount": "ещё",
     "skuratov": {
       "position": "Frontend Developer",
       "period": "Июль 2024 — Август 2025",
@@ -152,6 +157,7 @@
   },
   "projects": {
     "title": "Проекты",
+    "otherProjects": "Другие проекты",
     "view_code": "Код",
     "view_demo": "Демо",
     "view_gist": "Gist",
@@ -160,25 +166,25 @@
       "title": "Portfolio CV",
       "description": "Современное портфолио-резюме с поддержкой двух языков, темной/светлой темы, анимациями и мини-игрой Flappy Bird."
     },
-    "hooks": {
-      "title": "Custom React Hooks",
-      "description": "Коллекция переиспользуемых React хуков для управления состоянием, эффектами, формами и API запросами."
+    "cluster": {
+      "title": "Creative Cluster",
+      "description": "Сайт для арт пространства. В разработке..."
     },
-    "components": {
-      "title": "UI Components Library",
-      "description": "Библиотека переиспользуемых UI компонентов на React с TypeScript, Tailwind CSS и полной типизацией."
+    "weather": {
+      "title": "Weather",
+      "description": "Современное приложение для прогнозирования погоды, созданное с использованием Vue.js, TypeScript и Tailwind CSS. Предоставляет данные о погоде в реальном времени и прогнозы для мест по всему миру."
     },
-    "state": {
-      "title": "State Management Examples",
-      "description": "Примеры управления состоянием в React приложениях с Redux Toolkit, Zustand, Context API и другими решениями."
+    "todo": {
+      "title": "Todo",
+      "description": "Полнофункциональное приложение для управления задачами с поддержкой темной темы, фильтрацией и роутингом."
     },
-    "animations": {
-      "title": "Animation Showcase",
-      "description": "Коллекция анимаций и переходов с использованием Framer Motion, CSS Animations и GSAP."
+    "glam": {
+      "title": "Glam Corporate",
+      "description": "Сайт для новогоднего коропатива в Skuratov"
     },
-    "forms": {
-      "title": "Form Validation System",
-      "description": "Система валидации форм с React Hook Form, Zod схемами и кастомными валидаторами."
+    "storage": {
+      "title": "Cloud Storage",
+      "description": "Система облачного хранилища."
     }
   },
   "hobbies": {
@@ -246,6 +252,7 @@
     "email": "Email",
     "phone": "Телефон",
     "location": "Местоположение",
+    "locationValue": "Самара, Россия",
     "copy": "Копировать",
     "copied": "Скопировано!",
     "form": {
@@ -261,6 +268,14 @@
   },
   "game": {
     "title": "Flappy Bird",
+    "description": "Классическая аркадная игра. Управляйте птичкой и пролетайте через трубы!",
+    "tip": "Совет: Не торопитесь! Каждый прыжок должен быть рассчитан.",
+    "simpleControl": "Простое управление",
+    "simpleControlDesc": "Клик или пробел",
+    "records": "Рекорды",
+    "recordsDesc": "Побей свой хайскор",
+    "classic": "Классика",
+    "classicDesc": "Ностальгия из 2013",
     "score": "Очки",
     "highScore": "Рекорд",
     "start": "Начать",
