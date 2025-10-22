@@ -180,6 +180,41 @@
       "description": "Form validation system with React Hook Form, Zod schemas and custom validators."
     }
   },
+  "hobbies": {
+    "title": "Hobbies",
+    "music": {
+      "title": "Music & Sound Design",
+      "description": "Passionate about music production and sound design. Working with synthesizers and DAWs."
+    },
+    "design": {
+      "title": "Graphic Design",
+      "description": "UI/UX design, creating interfaces and visual concepts for projects."
+    },
+    "photo": {
+      "title": "Photography",
+      "description": "Photography and photo editing. Love experimenting with light and composition."
+    },
+    "video": {
+      "title": "Videography & Editing",
+      "description": "Video production from filming to final editing and color grading."
+    },
+    "games": {
+      "title": "Board Games",
+      "description": "Passionate about board games, strategies and cooperative games."
+    },
+    "reading": {
+      "title": "Reading",
+      "description": "Reading technical literature, philosophy and science fiction."
+    },
+    "sport": {
+      "title": "Sports",
+      "description": "Running and yoga to maintain physical fitness."
+    },
+    "community": {
+      "title": "Creative Community",
+      "description": "Running creative cluster 'Tusovka', organizing events."
+    }
+  },
   "test": {
     "title": "Language toggle test",
     "description": "Try switching the language!"
