@@ -1,7 +1,7 @@
 import { Project } from '../model'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/shared/ui/button'
-import { ExternalLink, Github, Code2, Star } from 'lucide-react'
+import { ExternalLink, Github, Code2, Star, Gitlab } from 'lucide-react'
 import { motion } from 'motion/react'
 
 interface ProjectCardProps {
@@ -62,6 +62,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             <Button variant="outline" size="sm" asChild>
               <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                 <Github className="size-4" />
+                {t('projects.view_code')}
+              </a>
+            </Button>
+          )}
+          {project.links.gitlab && (
+            <Button variant="outline" size="sm" asChild>
+              <a href={project.links.gitlab} target="_blank" rel="noopener noreferrer">
+                <Gitlab className="size-4" />
                 {t('projects.view_code')}
               </a>
             </Button>

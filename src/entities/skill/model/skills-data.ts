@@ -2,6 +2,15 @@ import { SkillCategory } from './types'
 
 export const skillsData: SkillCategory[] = [
   {
+    title: 'skills.categories.os',
+    skills: [
+      { name: 'Windows', level: 'Advanced', years: 14 },
+      { name: 'macOS', level: 'Intermediate', years: 3 },
+      { name: 'Linux', level: 'Beginner', years: 1 },
+      { name: 'Ubuntu', level: 'Beginner', years: 2 },
+    ],
+  },
+  {
     title: 'skills.categories.languages',
     skills: [
       { name: 'JavaScript', level: 'Advanced', years: 6 },

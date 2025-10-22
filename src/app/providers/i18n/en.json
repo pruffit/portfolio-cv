@@ -26,6 +26,9 @@
   },
   "skills": {
     "title": "Skills",
+    "year": "year",
+    "years2": "years",
+    "years5": "years",
     "categories": {
       "languages": "Programming Languages",
       "frameworks": "Frameworks & Libraries",
@@ -33,7 +36,8 @@
       "tools": "Tools & Bundlers",
       "testing": "Testing & Code Quality",
       "vcs": "Version Control Systems",
-      "devops": "DevOps / CI/CD"
+      "devops": "DevOps / CI/CD",
+      "os": "Operating Systems"
     },
     "levels": {
       "Beginner": "Beginner",
@@ -51,6 +55,7 @@
     "technologies": "Technologies",
     "responsibilities": "Responsibilities",
     "achievements": "Achievements",
+    "moreCount": "more",
     "skuratov": {
       "position": "Frontend Developer",
       "period": "July 2024 — August 2025",
@@ -151,6 +156,7 @@
   },
   "projects": {
     "title": "Projects",
+    "otherProjects": "Other Projects",
     "view_code": "Code",
     "view_demo": "Demo",
     "view_gist": "Gist",
@@ -159,25 +165,25 @@
       "title": "Portfolio CV",
       "description": "Modern portfolio resume with bilingual support, dark/light theme, animations and Flappy Bird mini-game."
     },
-    "hooks": {
-      "title": "Custom React Hooks",
-      "description": "Collection of reusable React hooks for state management, effects, forms and API requests."
+    "cluster": {
+      "title": "Creative Cluster",
+      "description": "Site for art place. In develop..."
     },
-    "components": {
-      "title": "UI Components Library",
-      "description": "Library of reusable React UI components with TypeScript, Tailwind CSS and full type safety."
+    "weather": {
+      "title": "Weather",
+      "description": "A modern weather forecast application built with Vue.js, TypeScript, and Tailwind CSS. Provides real-time weather data and forecasts for locations worldwide."
     },
-    "state": {
-      "title": "State Management Examples",
-      "description": "Examples of state management in React applications with Redux Toolkit, Zustand, Context API and other solutions."
+    "todo": {
+      "title": "Todo",
+      "description": "A full-featured task management application with support for dark themes, filtering, and routing."
     },
-    "animations": {
-      "title": "Animation Showcase",
-      "description": "Collection of animations and transitions using Framer Motion, CSS Animations and GSAP."
+    "glam": {
+      "title": "Glam Corporate",
+      "description": "Website for the New Year's coropative in Skuratov"
     },
-    "forms": {
-      "title": "Form Validation System",
-      "description": "Form validation system with React Hook Form, Zod schemas and custom validators."
+    "storage": {
+      "title": "Cloud Storage",
+      "description": "Cloud storage system."
     }
   },
   "hobbies": {
@@ -245,6 +251,7 @@
     "email": "Email",
     "phone": "Phone",
     "location": "Location",
+    "locationValue": "Samara, Russia",
     "copy": "Copy",
     "copied": "Copied!",
     "form": {
@@ -258,8 +265,16 @@
       "error": "Send error"
     }
   },
-  "game": {
+ "game": {
     "title": "Flappy Bird",
+    "description": "Classic arcade game. Control the bird and fly through the pipes!",
+    "tip": "Tip: Don't rush! Every jump should be calculated.",
+    "simpleControl": "Simple Control",
+    "simpleControlDesc": "Click or Space",
+    "records": "Records",
+    "recordsDesc": "Beat your high score",
+    "classic": "Classic",
+    "classicDesc": "Nostalgia from 2013",
     "score": "Score",
     "highScore": "High Score",
     "start": "Start",

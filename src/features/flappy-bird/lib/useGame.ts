@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { Bird, Pipe, GameState } from '../model/types'
+import { GameState } from '../model/types'
 import { GAME_CONFIG, CANVAS_WIDTH, CANVAS_HEIGHT } from '../model/constants'
 import {
   updateBird,
@@ -7,121 +7,146 @@ import {
   createPipe,
   updatePipes,
   checkCollision,
-  updateScore,
   shouldAddNewPipe,
 } from './gameLogic'
 
 export function useGame() {
   const [gameState, setGameState] = useState<GameState>('idle')
-  const [score, setScore] = useState(0)
+  const [displayScore, setDisplayScore] = useState(0)
   const [highScore, setHighScore] = useState(() => {
     const saved = localStorage.getItem('flappyBirdHighScore')
     return saved ? parseInt(saved, 10) : 0
   })
 
-  const [bird, setBird] = useState<Bird>({
+  const birdRef = useRef({
     x: 100,
     y: CANVAS_HEIGHT / 2,
     velocity: 0,
     radius: GAME_CONFIG.birdRadius,
   })
 
-  const [pipes, setPipes] = useState<Pipe[]>([])
-  const gameLoopRef = useRef<number>(0)
+  const pipesRef = useRef<Array<{
+    x: number
+    topHeight: number
+    bottomY: number
+    width: number
+    gap: number
+    passed: boolean
+  }>>([])
+
+  const scoreRef = useRef(0)
+  const animationRef = useRef<number>(0)
+  const gameStateRef = useRef<GameState>('idle')
+
+  const [renderTrigger, setRenderTrigger] = useState(0)
+
+  useEffect(() => {
+    gameStateRef.current = gameState
+  }, [gameState])
 
   const startGame = useCallback(() => {
-    setBird({
+    birdRef.current = {
       x: 100,
       y: CANVAS_HEIGHT / 2,
       velocity: 0,
       radius: GAME_CONFIG.birdRadius,
-    })
-    setPipes([createPipe(CANVAS_WIDTH, GAME_CONFIG)])
-    setScore(0)
+    }
+    pipesRef.current = [createPipe(CANVAS_WIDTH, GAME_CONFIG)]
+    scoreRef.current = 0
+    setDisplayScore(0)
     setGameState('playing')
   }, [])
 
   const jump = useCallback(() => {
-    if (gameState === 'idle') {
+    const currentState = gameStateRef.current
+    
+    if (currentState === 'idle') {
       startGame()
-    } else if (gameState === 'playing') {
-      setBird(prev => jumpBird(prev, GAME_CONFIG))
+      setTimeout(() => {
+        birdRef.current = jumpBird(birdRef.current, GAME_CONFIG)
+      }, 0)
+    } else if (currentState === 'playing') {
+      birdRef.current = jumpBird(birdRef.current, GAME_CONFIG)
     }
-  }, [gameState, startGame])
+  }, [startGame])
 
   const togglePause = useCallback(() => {
-    if (gameState === 'playing') {
-      setGameState('paused')
-    } else if (gameState === 'paused') {
-      setGameState('playing')
-    }
-  }, [gameState])
+    setGameState(prev => {
+      if (prev === 'playing') return 'paused'
+      if (prev === 'paused') return 'playing'
+      return prev
+    })
+  }, [])
 
   const resetGame = useCallback(() => {
-    setGameState('idle')
-    setBird({
+    if (animationRef.current) {
+      cancelAnimationFrame(animationRef.current)
+    }
+    birdRef.current = {
       x: 100,
       y: CANVAS_HEIGHT / 2,
       velocity: 0,
       radius: GAME_CONFIG.birdRadius,
-    })
-    setPipes([])
-    setScore(0)
+    }
+    pipesRef.current = []
+    scoreRef.current = 0
+    setDisplayScore(0)
+    setGameState('idle')
+    setRenderTrigger(prev => prev + 1)
   }, [])
 
   useEffect(() => {
     if (gameState !== 'playing') {
-      if (gameLoopRef.current) {
-        cancelAnimationFrame(gameLoopRef.current)
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
       }
       return
     }
 
     const gameLoop = () => {
-      setBird(prev => {
-        const updated = updateBird(prev, GAME_CONFIG)
-        return updated
-      })
+      birdRef.current = updateBird(birdRef.current, GAME_CONFIG)
 
-      setPipes(prev => {
-        let updated = updatePipes(prev, GAME_CONFIG)
+      pipesRef.current = updatePipes(pipesRef.current, GAME_CONFIG)
 
-        updated = updated.filter(pipe => pipe.x + pipe.width > 0)
+      pipesRef.current = pipesRef.current.filter(pipe => pipe.x + pipe.width > 0)
 
-        if (shouldAddNewPipe(updated, GAME_CONFIG)) {
-          updated.push(createPipe(CANVAS_WIDTH, GAME_CONFIG))
-        }
+      if (shouldAddNewPipe(pipesRef.current, GAME_CONFIG)) {
+        pipesRef.current.push(createPipe(CANVAS_WIDTH, GAME_CONFIG))
+      }
 
-        return updated
-      })
-
-      if (checkCollision(bird, pipes)) {
+      if (checkCollision(birdRef.current, pipesRef.current)) {
         setGameState('gameOver')
-
-        if (score > highScore) {
-          setHighScore(score)
-          localStorage.setItem('flappyBirdHighScore', score.toString())
+        
+        if (scoreRef.current > highScore) {
+          setHighScore(scoreRef.current)
+          localStorage.setItem('flappyBirdHighScore', scoreRef.current.toString())
         }
+        
+        setRenderTrigger(prev => prev + 1)
         return
       }
 
-      const { pipes: updatedPipes, scoreIncrement } = updateScore(bird, pipes)
-      if (scoreIncrement > 0) {
-        setPipes(updatedPipes)
-        setScore(prev => prev + scoreIncrement)
-      }
+      pipesRef.current.forEach(pipe => {
+        if (!pipe.passed && birdRef.current.x > pipe.x + pipe.width) {
+          pipe.passed = true
+          scoreRef.current += 1
+          setDisplayScore(scoreRef.current)
+        }
+      })
 
-      gameLoopRef.current = requestAnimationFrame(gameLoop)
+      setRenderTrigger(prev => prev + 1)
+
+      animationRef.current = requestAnimationFrame(gameLoop)
     }
 
-    gameLoopRef.current = requestAnimationFrame(gameLoop)
+    animationRef.current = requestAnimationFrame(gameLoop)
 
     return () => {
-      if (gameLoopRef.current) {
-        cancelAnimationFrame(gameLoopRef.current)
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [gameState, bird, pipes, score, highScore])
+  }, [gameState, highScore])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -140,9 +165,9 @@ export function useGame() {
 
   return {
     gameState,
-    bird,
-    pipes,
-    score,
+    bird: { ...birdRef.current, _trigger: renderTrigger },
+    pipes: [...pipesRef.current],
+    score: displayScore,
     highScore,
     startGame,
     jump,

@@ -34,7 +34,7 @@ export const achievementsData: Achievement[] = [
     issuer: 'achievements.education.issuer',
     date: '2024',
     description: 'achievements.education.description',
-    image: '/images/achievements/pguti.svg',
+    image: '/images/achievements/pguti.jpg',
     skills: ['Computer Science', 'Software Engineering'],
   },
 ]

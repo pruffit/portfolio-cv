@@ -44,7 +44,7 @@ export function ContactCard({ contact, index }: ContactCardProps) {
 
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-muted-foreground">{t(contact.label)}</p>
-        <p className="truncate font-semibold">{contact.value}</p>
+        <p className="truncate font-semibold">{contact.id === 'location' ? t(contact.value) : contact.value}</p>
       </div>
 
       {contact.copyable && (

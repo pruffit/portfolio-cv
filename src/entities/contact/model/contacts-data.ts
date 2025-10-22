@@ -1,5 +1,5 @@
 import { Contact } from './types'
-import { Mail, Send, Github, Linkedin, MapPin, Phone } from 'lucide-react'
+import { Mail, Send, Github, FileText, MapPin, Phone } from 'lucide-react'
 
 export const contactsData: Contact[] = [
   {
@@ -33,17 +33,17 @@ export const contactsData: Contact[] = [
     href: 'https://github.com/pruffit',
   },
   {
-    id: 'linkedin',
-    icon: Linkedin,
-    label: 'LinkedIn',
-    value: 'Kotlaev Danil',
-    href: 'https://linkedin.com',
+    id: 'habr',
+    icon: FileText,
+    label: 'Habr',
+    value: '@pruffit',
+    href: 'https://habr.com/ru/users/pruffit',
   },
   {
     id: 'location',
     icon: MapPin,
     label: 'contacts.location',
-    value: 'Самара, Россия',
+    value: 'contacts.locationValue',
     href: 'https://www.google.com/maps/place/Samara',
   },
 ]
