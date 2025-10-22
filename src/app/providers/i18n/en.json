@@ -258,6 +258,27 @@
       "error": "Send error"
     }
   },
+  "game": {
+    "title": "Flappy Bird",
+    "score": "Score",
+    "highScore": "High Score",
+    "start": "Start",
+    "pause": "Pause",
+    "resume": "Resume",
+    "reset": "Reset",
+    "gameOver": "Game Over!",
+    "paused": "Paused",
+    "finalScore": "Final Score",
+    "clickToStart": "Click to start",
+    "clickToResume": "Click to resume",
+    "clickToRestart": "Click to restart",
+    "instructions": {
+      "title": "Controls:",
+      "click": "Mouse click or tap - jump",
+      "space": "Space or ↑ - jump",
+      "pause": "P or Esc - pause"
+    }
+  },
   "test": {
     "title": "Language toggle test",
     "description": "Try switching the language!"
