@@ -4,6 +4,13 @@
     "language": "Language",
     "download_cv": "Download CV"
   },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist or has been moved.",
+    "goHome": "Go to Home",
+    "goBack": "Go Back",
+    "help": "If you think this is a mistake, please contact the site administrator."
+  },
   "nav": {
     "about": "About",
     "skills": "Skills",
@@ -225,23 +232,23 @@
     "title": "Achievements",
     "react": {
       "title": "React Advanced Developer",
-      "issuer": "Online Courses",
-      "description": "Deep dive into React: hooks, performance optimization, application architecture."
+      "issuer": "Online Courses & Production Projects",
+      "description": "Deep dive into React: hooks, performance optimization, application architecture and best practices."
     },
     "typescript": {
       "title": "TypeScript Expert",
-      "issuer": "Self-study & Practice",
-      "description": "Advanced TypeScript usage: generics, utility types, type-safe architecture."
+      "issuer": "Self-study & Production Practice",
+      "description": "Advanced TypeScript usage: generics, utility types, type-safe architecture and strict typing."
     },
     "nextjs": {
-      "title": "Next.js Developer",
-      "issuer": "Production Projects",
-      "description": "Building production Next.js applications with SSR, SSG and optimization."
+      "title": "Next.js Production Developer",
+      "issuer": "Real Production Projects",
+      "description": "Building production Next.js applications with SSR, SSG, API routes and optimization techniques."
     },
-    "education": {
-      "title": "Computer Science",
-      "issuer": "PSUTI",
-      "description": "Higher education degree in Computer Science and Engineering."
+    "architecture": {
+      "title": "Frontend Architecture & Design Patterns",
+      "issuer": "Self-study & Team Experience",
+      "description": "Mastering architectural patterns, clean code principles, SOLID, and scalable application design."
     }
   },
   "contacts": {

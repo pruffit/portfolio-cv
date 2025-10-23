@@ -4,6 +4,13 @@
     "language": "Язык",
     "download_cv": "Скачать резюме"
   },
+  "notFound": {
+    "title": "Страница не найдена",
+    "description": "Извините, страница, которую вы ищете, не существует или была перемещена.",
+    "goHome": "На главную",
+    "goBack": "Назад",
+    "help": "Если вы считаете, что это ошибка, пожалуйста, свяжитесь с администратором сайта."
+  },
   "nav": {
     "about": "Обо мне",
     "skills": "Навыки",
@@ -226,23 +233,23 @@
     "title": "Достижения",
     "react": {
       "title": "React Advanced Developer",
-      "issuer": "Online Courses",
-      "description": "Углубленное изучение React: хуки, оптимизация производительности, архитектура приложений."
+      "issuer": "Онлайн-курсы и продакшн-проекты",
+      "description": "Углубленное изучение React: хуки, оптимизация производительности, архитектура приложений и best practices."
     },
     "typescript": {
       "title": "TypeScript Expert",
-      "issuer": "Self-study & Practice",
-      "description": "Продвинутое использование TypeScript: дженерики, утилитные типы, type-safe архитектура."
+      "issuer": "Самообучение и продакшн-практика",
+      "description": "Продвинутое использование TypeScript: дженерики, утилитные типы, type-safe архитектура и строгая типизация."
     },
     "nextjs": {
-      "title": "Next.js Developer",
-      "issuer": "Production Projects",
-      "description": "Разработка production приложений на Next.js с SSR, SSG и оптимизацией."
+      "title": "Next.js Production Developer",
+      "issuer": "Реальные продакшн-проекты",
+      "description": "Разработка production приложений на Next.js с SSR, SSG, API routes и техниками оптимизации."
     },
-    "education": {
-      "title": "Информатика и вычислительная техника",
-      "issuer": "ПГУТИ",
-      "description": "Высшее образование по специальности 'Информатика и вычислительная техника'."
+    "architecture": {
+      "title": "Frontend-архитектура и паттерны проектирования",
+      "issuer": "Самообучение и командный опыт",
+      "description": "Освоение архитектурных паттернов, принципов чистого кода, SOLID и масштабируемого дизайна приложений."
     }
   },
   "contacts": {

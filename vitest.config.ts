@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/portfolio-cv/' : '/',
   plugins: [react()],
   test: {
     globals: true,
@@ -19,6 +20,20 @@ export default defineConfig({
       '@/widgets': path.resolve(__dirname, './src/widgets'),
       '@/pages': path.resolve(__dirname, './src/pages'),
       '@/app': path.resolve(__dirname, './src/app'),
+    },
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          motion: ['motion'],
+          i18n: ['i18next', 'react-i18next'],
+        },
+      },
     },
   },
 })
