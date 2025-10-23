@@ -2,8 +2,8 @@ import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/portfolio-cv/' : '/',
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/portfolio-cv/' : '/',
   plugins: [react()],
   test: {
     globals: true,
@@ -36,4 +36,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))
