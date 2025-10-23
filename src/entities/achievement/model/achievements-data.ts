@@ -29,12 +29,12 @@ export const achievementsData: Achievement[] = [
     skills: ['Next.js', 'SSR', 'SSG', 'React'],
   },
   {
-    id: 'education',
-    title: 'achievements.education.title',
-    issuer: 'achievements.education.issuer',
-    date: '2024',
-    description: 'achievements.education.description',
-    image: '/images/achievements/pguti.jpg',
-    skills: ['Computer Science', 'Software Engineering'],
-  },
+    id: "architecture",
+    title: "achievements.architecture.title",
+    issuer: "achievements.architecture.issuer",
+    date: "2024",
+    description: "achievements.architecture.description",
+    image: '/images/achievements/architecture.svg',
+    skills: ["Architecture", "Design Patterns", "Clean Code", "SOLID"]
+  }
 ]
