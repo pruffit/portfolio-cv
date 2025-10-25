@@ -18,6 +18,7 @@ export const projectsData: Project[] = [
     title: 'projects.cluster.title',
     description: 'projects.cluster.description',
     technologies: ['React', 'TypeScript', 'Custom Hooks', 'Vite', 'Tailwind CSS', 'Zustand', 'TanStack Query'],
+    image: '/images/projects/creative.png',
     links: {
       gitlab: 'https://gitlab.com/pruffit/creative-cluster',
     },
