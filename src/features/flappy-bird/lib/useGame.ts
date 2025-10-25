@@ -2,13 +2,14 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { GameState } from '../model/types'
 import { GAME_CONFIG, CANVAS_WIDTH, CANVAS_HEIGHT } from '../model/constants'
 import {
-  updateBird,
   jumpBird,
   createPipe,
-  updatePipes,
   checkCollision,
   shouldAddNewPipe,
 } from './gameLogic'
+
+const TARGET_FPS = 60
+const FRAME_TIME = 1000 / TARGET_FPS
 
 export function useGame() {
   const [gameState, setGameState] = useState<GameState>('idle')
@@ -37,6 +38,7 @@ export function useGame() {
   const scoreRef = useRef(0)
   const animationRef = useRef<number>(0)
   const gameStateRef = useRef<GameState>('idle')
+  const lastTimeRef = useRef<number>(0)
 
   const [renderTrigger, setRenderTrigger] = useState(0)
 
@@ -54,6 +56,7 @@ export function useGame() {
     pipesRef.current = [createPipe(CANVAS_WIDTH, GAME_CONFIG)]
     scoreRef.current = 0
     setDisplayScore(0)
+    lastTimeRef.current = performance.now()
     setGameState('playing')
   }, [])
 
@@ -72,8 +75,13 @@ export function useGame() {
 
   const togglePause = useCallback(() => {
     setGameState(prev => {
-      if (prev === 'playing') return 'paused'
-      if (prev === 'paused') return 'playing'
+      if (prev === 'playing') {
+        return 'paused'
+      }
+      if (prev === 'paused') {
+        lastTimeRef.current = performance.now()
+        return 'playing'
+      }
       return prev
     })
   }, [])
@@ -103,10 +111,22 @@ export function useGame() {
       return
     }
 
-    const gameLoop = () => {
-      birdRef.current = updateBird(birdRef.current, GAME_CONFIG)
+    const gameLoop = (currentTime: number) => {
+      const deltaTime = (currentTime - lastTimeRef.current) / FRAME_TIME
+      lastTimeRef.current = currentTime
 
-      pipesRef.current = updatePipes(pipesRef.current, GAME_CONFIG)
+      const clampedDelta = Math.min(deltaTime, 3)
+
+      birdRef.current = {
+        ...birdRef.current,
+        velocity: birdRef.current.velocity + GAME_CONFIG.gravity * clampedDelta,
+        y: birdRef.current.y + birdRef.current.velocity * clampedDelta,
+      }
+
+      pipesRef.current = pipesRef.current.map(pipe => ({
+        ...pipe,
+        x: pipe.x - GAME_CONFIG.pipeSpeed * clampedDelta,
+      }))
 
       pipesRef.current = pipesRef.current.filter(pipe => pipe.x + pipe.width > 0)
 
@@ -139,6 +159,7 @@ export function useGame() {
       animationRef.current = requestAnimationFrame(gameLoop)
     }
 
+    lastTimeRef.current = performance.now()
     animationRef.current = requestAnimationFrame(gameLoop)
 
     return () => {

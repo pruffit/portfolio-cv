@@ -1,16 +1,12 @@
 import { GameConfig } from './types'
 
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-  navigator.userAgent
-) || window.innerWidth < 768
-
 export const GAME_CONFIG: GameConfig = {
-  gravity: isMobile ? 0.3 : 0.4,
-  jumpForce: isMobile ? -8 : -7,
-  pipeSpeed: isMobile ? 1.5 : 2,
-  pipeGap: isMobile ? 200 : 180,
+  gravity: 0.4,
+  jumpForce: -7.5,
+  pipeSpeed: 2,
+  pipeGap: 180,
   pipeWidth: 60,
-  pipeSpacing: isMobile ? 320 : 300,
+  pipeSpacing: 300,
   birdRadius: 15,
 }
 
