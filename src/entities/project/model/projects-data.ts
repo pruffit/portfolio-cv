@@ -9,7 +9,7 @@ export const projectsData: Project[] = [
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Motion', 'i18next'],
     links: {
       github: 'https://github.com/pruffit/portfolio-cv',
-      demo: 'https://pruffit.github.io/portfolio-cv/',
+      demo: 'https://melodic-dieffenbachia-57416b.netlify.app/',
     },
     featured: true,
   },

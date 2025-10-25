@@ -1,16 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import { Container } from '@/shared/ui/container'
 import { achievementsData } from '@/entities/achievement'
-import { AchievementCard } from '@/entities/achievement/ui'
 import { AchievementsCarousel } from './AchievementsCarousel'
 import { motion } from 'motion/react'
 
 export function AchievementsSection() {
   const { t } = useTranslation()
-  const shouldUseCarousel = achievementsData.length > 4
 
   return (
-    <section id="achievements" className="bg-muted/50 py-16 md:py-24">
+    <section id="achievements" className="bg-muted/50 py-12 sm:py-16 md:py-24">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,19 +16,16 @@ export function AchievementsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
-            {t('achievements.title')}
-          </h2>
+          <div className="mb-8 text-center sm:mb-12">
+            <h2 className="mb-3 text-2xl font-bold tracking-tight sm:mb-4 sm:text-3xl md:text-4xl">
+              {t('achievements.title')}
+            </h2>
+            <p className="text-xs text-muted-foreground sm:text-sm">
+              Сертификаты, курсы и профессиональные достижения
+            </p>
+          </div>
 
-          {shouldUseCarousel ? (
-            <AchievementsCarousel achievements={achievementsData} />
-          ) : (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {achievementsData.map((achievement, index) => (
-                <AchievementCard key={achievement.id} achievement={achievement} index={index} />
-              ))}
-            </div>
-          )}
+          <AchievementsCarousel achievements={achievementsData} />
         </motion.div>
       </Container>
     </section>

@@ -36,15 +36,19 @@ export function ContactCard({ contact, index }: ContactCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
-      className="group relative flex items-center gap-4 rounded-lg border bg-card p-6 transition-all hover:shadow-md"
+      className="group relative flex items-center gap-3 rounded-lg border bg-card p-4 transition-all hover:shadow-md sm:gap-4 sm:p-6"
     >
-      <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110">
-        <Icon className="size-6" />
+      <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110 sm:size-12">
+        <Icon className="size-5 sm:size-6" />
       </div>
 
-      <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-muted-foreground">{t(contact.label)}</p>
-        <p className="truncate font-semibold">{contact.id === 'location' ? t(contact.value) : contact.value}</p>
+      <div className="min-w-0 flex-1 overflow-hidden">
+        <p className="truncate text-xs font-medium text-muted-foreground sm:text-sm">
+          {t(contact.label)}
+        </p>
+        <p className="truncate text-sm font-semibold sm:text-base">
+          {contact.id === 'location' ? t(contact.value) : contact.value}
+        </p>
       </div>
 
       {contact.copyable && (
@@ -56,8 +60,9 @@ export function ContactCard({ contact, index }: ContactCardProps) {
             handleCopy()
           }}
           className="shrink-0"
+          aria-label={copied ? t('contacts.copied') : t('contacts.copy')}
         >
-          {copied ? <Check className="size-4 text-green-500" /> : <Copy className="size-4" />}
+          {copied ? <Check className="size-3.5 text-green-500 sm:size-4" /> : <Copy className="size-3.5 sm:size-4" />}
         </Button>
       )}
     </motion.a>

@@ -230,25 +230,45 @@
   },
   "achievements": {
     "title": "Achievements",
-    "react": {
-      "title": "React Advanced Developer",
-      "issuer": "Online Courses & Production Projects",
-      "description": "Deep dive into React: hooks, performance optimization, application architecture and best practices."
+    "skuratov": {
+      "title": "Educational Platform Skuratov Coffee",
+      "issuer": "Frontend Developer in team",
+      "description": "Participated in developing an educational platform for a coffee shop chain. Implemented learning module interfaces, gamification system, and personal accounts. Platform covers 90% of employees with monthly course completion."
     },
-    "typescript": {
-      "title": "TypeScript Expert",
-      "issuer": "Self-study & Production Practice",
-      "description": "Advanced TypeScript usage: generics, utility types, type-safe architecture and strict typing."
+    "condition": {
+      "title": "E-commerce Platform Condition Tea",
+      "issuer": "Frontend Developer",
+      "description": "Developed an online store for premium tea with subscription system. Created product catalog, cart, and checkout process. UX optimization led to 25% conversion growth and 30% increase in customer LTV."
     },
-    "nextjs": {
-      "title": "Next.js Production Developer",
-      "issuer": "Real Production Projects",
-      "description": "Building production Next.js applications with SSR, SSG, API routes and optimization techniques."
+    "usti": {
+      "title": "Booking Platform USTI YogaFlow",
+      "issuer": "Frontend Developer",
+      "description": "Developed online booking and payment system for yoga studio with SSR/SSG. Implemented schedule, reservations, and payment gateway integration. Optimization resulted in 30% faster page load times."
     },
     "architecture": {
-      "title": "Frontend Architecture & Design Patterns",
-      "issuer": "Self-study & Team Experience",
-      "description": "Mastering architectural patterns, clean code principles, SOLID, and scalable application design."
+      "title": "Feature-Sliced Design Architecture",
+      "issuer": "Professional practice",
+      "description": "Mastered and applied FSD architectural methodology in production projects. Built scalable code structure with clear layer separation, improving maintainability and team collaboration."
+    },
+    "performance": {
+      "title": "Web Performance Optimization",
+      "issuer": "All projects",
+      "description": "Systematically optimize web application performance: apply code splitting, lazy loading, resource optimization. Achieved 30-40% load time reduction across all projects."
+    },
+    "typescript": {
+      "title": "TypeScript Advanced Patterns",
+      "issuer": "Production experience",
+      "description": "Deep TypeScript expertise: use generics, utility types, conditional types. Create type-safe architecture in large projects, reducing runtime errors and improving developer experience."
+    },
+    "testing": {
+      "title": "Testing & Quality Assurance",
+      "issuer": "Professional practice",
+      "description": "Write unit, integration, and E2E tests in projects. Maintain coverage above 80% in critical modules. Use Jest, Vitest, React Testing Library to ensure code quality."
+    },
+    "community": {
+      "title": "Creative Cluster 'Tusovka'",
+      "issuer": "Founder and organizer",
+      "description": "Created and developing a creative space that brings together creative people. Organize events, workshops, and meetups. Developing leadership and event management skills."
     }
   },
   "contacts": {

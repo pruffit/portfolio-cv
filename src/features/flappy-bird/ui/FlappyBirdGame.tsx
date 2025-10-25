@@ -34,12 +34,12 @@ export function FlappyBirdGame() {
   }
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[auto_1fr]">
-      <div className="mx-auto">
+    <div className="flex flex-col gap-4 sm:gap-6 lg:grid lg:grid-cols-[1fr_auto] lg:gap-8">
+      <div className="order-1 flex items-center justify-center lg:order-1">
         <div
           onClick={handleClick}
           onKeyDown={handleKeyDown}
-          className="relative cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-card"
+          className="relative w-full cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-card"
           role="button"
           tabIndex={0}
           aria-label="Game canvas - Click or press Space to jump"
@@ -49,15 +49,17 @@ export function FlappyBirdGame() {
         </div>
       </div>
 
-      <div className="flex items-center">
-        <GameControls
-          gameState={gameState}
-          score={score}
-          highScore={highScore}
-          onStart={startGame}
-          onPause={togglePause}
-          onReset={resetGame}
-        />
+      <div className="order-2 flex items-start justify-center lg:order-2 lg:items-center">
+        <div className="w-full lg:w-80">
+          <GameControls
+            gameState={gameState}
+            score={score}
+            highScore={highScore}
+            onStart={startGame}
+            onPause={togglePause}
+            onReset={resetGame}
+          />
+        </div>
       </div>
     </div>
   )
