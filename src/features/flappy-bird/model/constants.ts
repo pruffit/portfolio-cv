@@ -13,14 +13,14 @@ export const GAME_CONFIG: GameConfig = {
 export const getCanvasSize = () => {
   const maxWidth = Math.min(window.innerWidth - 32, 500)
   const maxHeight = Math.min(window.innerHeight * 0.6, 600)
-  
+
   if (window.innerWidth < 640) {
     return {
       width: maxWidth,
       height: Math.min(maxHeight, maxWidth * 1.5),
     }
   }
-  
+
   return {
     width: 400,
     height: 600,

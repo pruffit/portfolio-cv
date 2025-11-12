@@ -12,6 +12,11 @@ export interface Experience {
     frontend?: number
     backend?: number
     designer?: number
-    manager?: number
+    qa?: number
+    seo?: number
+    copy?: number
+    project?: number
+    product?: number
+    lead?: number
   }
 }

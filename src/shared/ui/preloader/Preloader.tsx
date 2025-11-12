@@ -47,9 +47,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
               transition={{ duration: 0.5 }}
               className="text-center"
             >
-              <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
-                Kotlaev Danil
-              </h1>
+              <h1 className="text-3xl font-bold tracking-tight md:text-4xl">KOTLAEV DANIL</h1>
               <p className="mt-2 text-lg text-muted-foreground">Frontend Developer</p>
             </motion.div>
 
@@ -70,23 +68,6 @@ export function Preloader({ onComplete }: PreloaderProps) {
               >
                 {Math.round(Math.min(progress, 100))}%
               </motion.p>
-            </div>
-
-            <div className="flex gap-2">
-              {[0, 1, 2].map(i => (
-                <motion.div
-                  key={i}
-                  animate={{
-                    y: [0, -20, 0],
-                  }}
-                  transition={{
-                    duration: 0.6,
-                    repeat: Infinity,
-                    delay: i * 0.1,
-                  }}
-                  className="size-3 rounded-full bg-primary"
-                />
-              ))}
             </div>
           </div>
         </motion.div>

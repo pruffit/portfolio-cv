@@ -62,7 +62,11 @@ export function ContactCard({ contact, index }: ContactCardProps) {
           className="shrink-0"
           aria-label={copied ? t('contacts.copied') : t('contacts.copy')}
         >
-          {copied ? <Check className="size-3.5 text-green-500 sm:size-4" /> : <Copy className="size-3.5 sm:size-4" />}
+          {copied ? (
+            <Check className="size-3.5 text-green-500 sm:size-4" />
+          ) : (
+            <Copy className="size-3.5 sm:size-4" />
+          )}
         </Button>
       )}
     </motion.a>

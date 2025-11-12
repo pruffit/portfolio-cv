@@ -1,13 +1,13 @@
 interface EnvConfig {
   sentryDsn: string
-  
+
   gaId: string
   ymId: string
-  
+
   apiBaseUrl?: string
   debug: boolean
   cdnUrl?: string
-  
+
   mode: string
   isProd: boolean
   isDev: boolean
@@ -15,17 +15,17 @@ interface EnvConfig {
 
 export function getEnvConfig(): EnvConfig {
   const env = import.meta.env
-  
+
   return {
     sentryDsn: env.VITE_SENTRY_DSN || '',
-    
+
     gaId: env.VITE_GA_MEASUREMENT_ID || '',
     ymId: env.VITE_YM_COUNTER_ID || '',
-    
+
     apiBaseUrl: env.VITE_API_BASE_URL,
     debug: env.VITE_DEBUG === 'true',
     cdnUrl: env.VITE_CDN_URL,
-    
+
     mode: env.MODE,
     isProd: env.PROD,
     isDev: env.DEV,
@@ -38,15 +38,15 @@ export function validateEnv(): {
 } {
   const config = getEnvConfig()
   const missing: string[] = []
-  
+
   if (!config.isProd) {
     return { isValid: true, missing: [] }
   }
-  
+
   if (!config.sentryDsn) missing.push('VITE_SENTRY_DSN')
   if (!config.gaId) missing.push('VITE_GA_MEASUREMENT_ID')
   if (!config.ymId) missing.push('VITE_YM_COUNTER_ID')
-  
+
   return {
     isValid: missing.length === 0,
     missing,
@@ -56,7 +56,7 @@ export function validateEnv(): {
 export function logEnvConfig(): void {
   if (import.meta.env.DEV) {
     const config = getEnvConfig()
-    
+
     console.group('🔧 Environment Configuration')
     console.log('Mode:', config.mode)
     console.log('Production:', config.isProd)
@@ -72,7 +72,7 @@ export function logEnvConfig(): void {
 
 export function getSafeEnvInfo(): Record<string, unknown> {
   const config = getEnvConfig()
-  
+
   return {
     mode: config.mode,
     isProd: config.isProd,

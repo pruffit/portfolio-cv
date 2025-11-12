@@ -25,14 +25,17 @@ export function AchievementsCarousel({ achievements }: AchievementsCarouselProps
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
   }, [emblaApi])
-  
+
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext()
   }, [emblaApi])
-  
-  const scrollTo = useCallback((index: number) => {
-    if (emblaApi) emblaApi.scrollTo(index)
-  }, [emblaApi])
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (emblaApi) emblaApi.scrollTo(index)
+    },
+    [emblaApi]
+  )
 
   const onInit = useCallback(() => {
     if (!emblaApi) return
@@ -86,7 +89,7 @@ export function AchievementsCarousel({ achievements }: AchievementsCarouselProps
       >
         <ChevronLeft className="size-4 sm:size-5" />
       </Button>
-      
+
       <Button
         variant="outline"
         size="icon-sm"

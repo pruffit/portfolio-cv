@@ -10,19 +10,19 @@ interface GameCanvasProps {
 
 const getCanvasSize = () => {
   if (typeof window === 'undefined') return { width: 400, height: 600 }
-  
+
   const width = window.innerWidth
-  
+
   if (width < 640) {
     const canvasWidth = Math.min(width - 32, 400)
     const canvasHeight = Math.min(canvasWidth * 1.5, 600)
     return { width: canvasWidth, height: canvasHeight }
   }
-  
+
   if (width < 1024) {
     return { width: 400, height: 600 }
   }
-  
+
   return { width: 450, height: 600 }
 }
 
@@ -35,7 +35,7 @@ export function GameCanvas({ bird, pipes, gameState }: GameCanvasProps) {
     const handleResize = () => {
       const newSize = getCanvasSize()
       canvasSizeRef.current = newSize
-      
+
       if (canvasRef.current) {
         canvasRef.current.width = newSize.width
         canvasRef.current.height = newSize.height

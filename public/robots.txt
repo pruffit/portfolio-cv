@@ -1,16 +1,36 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://pruffit.github.io/portfolio-cv/sitemap.xml
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: YandexImages
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: bingbot
+Allow: /
 
 # Block common crawlers from assets
 User-agent: *
-Disallow: /assets/
+Disallow: /assets/*.js
+Disallow: /assets/*.css
+Allow: /assets/*.jpg
+Allow: /assets/*.jpeg
+Allow: /assets/*.png
+Allow: /assets/*.webp
+Allow: /assets/*.svg
 
-# Allow images for Google
-User-agent: Googlebot-Image
-Allow: /images/
+# Sitemap location
+Sitemap: https://melodic-dieffenbachia-57416b.netlify.app/sitemap.xml
 
-# Crawl delay
-Crawl-delay: 1
+Host: https://melodic-dieffenbachia-57416b.netlify.app

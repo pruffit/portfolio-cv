@@ -1,12 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { GameState } from '../model/types'
 import { GAME_CONFIG, CANVAS_WIDTH, CANVAS_HEIGHT } from '../model/constants'
-import {
-  jumpBird,
-  createPipe,
-  checkCollision,
-  shouldAddNewPipe,
-} from './gameLogic'
+import { jumpBird, createPipe, checkCollision, shouldAddNewPipe } from './gameLogic'
 
 const TARGET_FPS = 60
 const FRAME_TIME = 1000 / TARGET_FPS
@@ -26,14 +21,16 @@ export function useGame() {
     radius: GAME_CONFIG.birdRadius,
   })
 
-  const pipesRef = useRef<Array<{
-    x: number
-    topHeight: number
-    bottomY: number
-    width: number
-    gap: number
-    passed: boolean
-  }>>([])
+  const pipesRef = useRef<
+    Array<{
+      x: number
+      topHeight: number
+      bottomY: number
+      width: number
+      gap: number
+      passed: boolean
+    }>
+  >([])
 
   const scoreRef = useRef(0)
   const animationRef = useRef<number>(0)
@@ -62,7 +59,7 @@ export function useGame() {
 
   const jump = useCallback(() => {
     const currentState = gameStateRef.current
-    
+
     if (currentState === 'idle') {
       startGame()
       setTimeout(() => {
@@ -136,12 +133,12 @@ export function useGame() {
 
       if (checkCollision(birdRef.current, pipesRef.current)) {
         setGameState('gameOver')
-        
+
         if (scoreRef.current > highScore) {
           setHighScore(scoreRef.current)
           localStorage.setItem('flappyBirdHighScore', scoreRef.current.toString())
         }
-        
+
         setRenderTrigger(prev => prev + 1)
         return
       }

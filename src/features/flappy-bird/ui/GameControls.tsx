@@ -51,7 +51,12 @@ export function GameControls({
         )}
 
         {gameState === 'playing' && (
-          <Button onClick={onPause} variant="outline" size="lg" className="flex-1 text-xs sm:text-sm md:text-base">
+          <Button
+            onClick={onPause}
+            variant="outline"
+            size="lg"
+            className="flex-1 text-xs sm:text-sm md:text-base"
+          >
             <Pause className="size-3.5 sm:size-4" />
             <span className="hidden sm:inline">{t('game.pause')}</span>
             <span className="sm:hidden">Pause</span>

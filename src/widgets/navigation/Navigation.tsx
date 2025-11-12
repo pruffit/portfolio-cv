@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/shared/lib/utils'
 import { useState, useEffect } from 'react'
+import { SEO } from '@/shared/SEO'
 
 const navItems = [
   { key: 'about', href: '#about' },
@@ -50,22 +51,25 @@ export function Navigation({ className }: NavigationProps) {
   }
 
   return (
-    <nav className={cn('flex items-center gap-1', className)}>
-      {navItems.map(item => (
-        <a
-          key={item.key}
-          href={item.href}
-          onClick={e => handleClick(e, item.href)}
-          className={cn(
-            'cursor-pointer rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-foreground',
-            activeSection === item.key.replace('nav.', '')
-              ? 'bg-accent text-foreground'
-              : 'text-muted-foreground'
-          )}
-        >
-          {t(`nav.${item.key}`)}
-        </a>
-      ))}
-    </nav>
+    <>
+      <SEO title="Навигация" titleEn="Navigation" path="/" />
+      <nav className={cn('flex items-center gap-1', className)}>
+        {navItems.map(item => (
+          <a
+            key={item.key}
+            href={item.href}
+            onClick={e => handleClick(e, item.href)}
+            className={cn(
+              'cursor-pointer rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-foreground',
+              activeSection === item.key.replace('nav.', '')
+                ? 'bg-accent text-foreground'
+                : 'text-muted-foreground'
+            )}
+          >
+            {t(`nav.${item.key}`)}
+          </a>
+        ))}
+      </nav>
+    </>
   )
 }
