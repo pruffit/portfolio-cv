@@ -5,7 +5,7 @@ import { defineConfig, type ConfigEnv } from "vite"
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }: ConfigEnv) => ({
-  base: mode === 'production' ? '/portfolio-cv/' : '/',
+  base: '/',
   
   plugins: [
     react({

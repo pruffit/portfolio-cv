@@ -1,7 +1,6 @@
 import { Container } from '@/shared/ui/container'
 import { Github, Send, Mail } from 'lucide-react'
 import { Button } from '@/shared/ui/button'
-import { SEO } from '@/shared/SEO'
 
 const socialLinks = [
   {
@@ -25,32 +24,29 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <>
-      <SEO title="Подвал" titleEn="Footer" path="/" />
-      <footer className="border-t bg-background">
-        <Container>
-          <div className="flex flex-col items-center justify-between gap-4 py-6 md:flex-row md:py-8">
-            <p className="text-center text-sm text-muted-foreground md:text-left">
-              © {currentYear} Kotlaev Danil. All rights reserved.
-            </p>
+    <footer className="border-t bg-background">
+      <Container>
+        <div className="flex flex-col items-center justify-between gap-4 py-6 md:flex-row md:py-8">
+          <p className="text-center text-sm text-muted-foreground md:text-left">
+            © {currentYear} Kotlaev Danil. All rights reserved.
+          </p>
 
-            <div className="flex items-center gap-2">
-              {socialLinks.map(link => (
-                <Button key={link.name} variant="ghost" size="icon-sm" asChild>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={link.name}
-                  >
-                    <link.icon className="size-4" />
-                  </a>
-                </Button>
-              ))}
-            </div>
+          <div className="flex items-center gap-2">
+            {socialLinks.map(link => (
+              <Button key={link.name} variant="ghost" size="icon-sm" asChild>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.name}
+                >
+                  <link.icon className="size-4" />
+                </a>
+              </Button>
+            ))}
           </div>
-        </Container>
-      </footer>
-    </>
+        </div>
+      </Container>
+    </footer>
   )
 }
