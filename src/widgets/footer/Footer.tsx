@@ -11,12 +11,12 @@ const socialLinks = [
   {
     name: 'Telegram',
     icon: Send,
-    href: 'https://t.me/userpruffit',
+    href: 'https://t.me/kotlaev_d',
   },
   {
     name: 'Email',
     icon: Mail,
-    href: 'mailto:kotlaevdanil@gmail.com',
+    href: 'mailto:danilkotlaev9@gmail.com',
   },
 ]
 

@@ -18,9 +18,9 @@ export function AboutSection() {
   }
 
   const quickLinks = [
-    { icon: Mail, href: 'mailto:kotlaevdanil@gmail.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:danilkotlaev9@gmail.com', label: 'Email' },
     { icon: Github, href: 'https://github.com/pruffit', label: 'GitHub' },
-    { icon: Send, href: 'https://t.me/userpruffit', label: 'Telegram' },
+    { icon: Send, href: 'https://t.me/kotlaev_d', label: 'Telegram' },
   ]
 
   return (

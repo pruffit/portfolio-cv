@@ -6,8 +6,8 @@ export const contactsData: Contact[] = [
     id: 'email',
     icon: Mail,
     label: 'contacts.email',
-    value: 'kotlaevdanil@gmail.com',
-    href: 'mailto:kotlaevdanil@gmail.com',
+    value: 'danilkotlaev9@gmail.com',
+    href: 'mailto:danilkotlaev9@gmail.com',
     copyable: true,
   },
   {
@@ -22,8 +22,8 @@ export const contactsData: Contact[] = [
     id: 'telegram',
     icon: Send,
     label: 'Telegram',
-    value: '@userpruffit',
-    href: 'https://t.me/userpruffit',
+    value: '@kotlaev_d',
+    href: 'https://t.me/kotlaev_d',
   },
   {
     id: 'github',
